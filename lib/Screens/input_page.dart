@@ -20,7 +20,7 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Gender? selectedGender;
+  Gender selectedGender;
 
   int height = 180;
   int weight = 60;
@@ -237,14 +237,11 @@ class _InputPageState extends State<InputPage> {
             buttonTitle: 'CALCULATE',
             onTap: () {
               CalculatorBrain calculate = CalculatorBrain(height: height, weight: weight);
-              setState(() {
-
-              });
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => ResultPage(
-                    bmiResult: calculate.CalculateBMI(),
+                    bmiResult: calculate.calculateBMI(),
                     bmiResultText: calculate.getResult(),
                     bmiResultInterpretation: calculate.getInterpretation(),
                   ),

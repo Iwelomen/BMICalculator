@@ -4,11 +4,11 @@ import 'package:calculator_bmi/Components/reusable_card.dart';
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
-  ResultPage({required this.bmiResult, required this.bmiResultInterpretation, required this.bmiResultText});
+  ResultPage(
+      {this.bmiResult, this.bmiResultInterpretation, this.bmiResultText});
   final String bmiResult;
   final String bmiResultText;
   final String bmiResultInterpretation;
-
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class ResultPage extends StatelessWidget {
               childCard: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children:  [
+                children: [
                   Text(
                     bmiResultText.toUpperCase(),
                     style: kResultTextStyle,
@@ -47,7 +47,7 @@ class ResultPage extends StatelessWidget {
                     style: kBMITextStyle,
                   ),
                   Text(
-                    bmiResultInterpretation ,
+                    bmiResultInterpretation,
                     style: kBodyTextStyle,
                     textAlign: TextAlign.center,
                   )
@@ -55,10 +55,12 @@ class ResultPage extends StatelessWidget {
               ),
             ),
           ),
-          CalculateButton(buttonTitle: 'RE-CALCULATE',
+          CalculateButton(
+            buttonTitle: 'RE-CALCULATE',
             onTap: () {
-            Navigator.pop(context);
-            },)
+              Navigator.pop(context);
+            },
+          ),
         ],
       ),
     );

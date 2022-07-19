@@ -7,8 +7,8 @@ import 'constant.dart';
 class IconAndText extends StatelessWidget {
   IconAndText({this.customIcon, this.customText});
 
-  final IconData? customIcon;
-  final String? customText;
+  final IconData customIcon;
+  final String customText;
 
   @override
   Widget build(BuildContext context) {

@@ -18,7 +18,7 @@ Function calculator(int n1, int n2, Function calculation) {
 
 
 class Car {
-  CarType? carStyle;
+  CarType carStyle;
 
   Car({this.carStyle});
   }

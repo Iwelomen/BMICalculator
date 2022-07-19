@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'constant.dart';
 
 class CalculateButton extends StatelessWidget {
-  CalculateButton({required this.buttonTitle, required this.onTap});
+  CalculateButton({this.buttonTitle, this.onTap});
   final String buttonTitle;
   final VoidCallback onTap;
 
